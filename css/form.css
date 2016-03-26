@@ -1,0 +1,730 @@
+/* ----------------------------------
+ * Project Detail *
+
+    Front-end Developer: Muhannad Abdelrazek;
+    Templete version: 1.1;
+    E-mail: muhnad.abdelrazek@gmail.com
+    codepen: @Muhnad.
+    github: Muhannad Abdelrazek
+    Twitter: @Muhnad_a.
+    Facebook: Muhannad Abdelrazek.
+
+     
+
+
+Folders Map ==>
+
+
+-css/
+    - custom.css
+    - button.css
+    - form.css
+    - nav.css
+    - ui.css
+    - license.css
+	- normalize.css
+
+-js/
+	- custom.js
+
+
+
+-Templete Map ==>
+
+
+-body
+    - button section
+    - form section
+    - nav section
+    - ui section
+
+-colors
+    -primary color  ===> #11355C.
+    - Font color    ===> Mix between #FFF , #11355c.
+
+-Fonts
+    - primary Font  ===> sans-serif
+    - font-size     ===> 14: 22px.
+
+- css libraries
+    - Normalize
+
+-JS libraries
+    - none.
+
+-Responsive
+    - mobiles: true;
+    - tablets: true;
+    - laptops: true;
+
+ * ---------------------------------- */
+::selection{
+    background: #1860AD;
+    color: #FFF
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background: #FFF;
+}
+::-moz-scrollbar {
+    width: 5px;
+    background: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 40px;
+    border-radius: 20px;
+    background: #11355c;
+}
+::-moz-scrollbar-thumb {
+    height: 40px;
+    border-radius: 20px;
+    background: #11355c;
+}
+/*Start Global */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 1200px;
+    margin: auto
+}
+.clearfix{clear: both}
+/*End Global*/
+
+body{
+    height: auto;
+    color: #11355C;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    overflow-x: hidden;
+}
+
+/***start header***/
+header{
+    width: 100%;
+    height: auto;
+}
+
+/*start nav*/
+header .main-nav{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background: #11355C;
+    color: #FFF;
+    overflow: hidden;
+}
+
+/*start nav logo*/
+.main-nav .logo{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.logo .logo-name{
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo .logo-name a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+/*start nav list*/
+.main-nav .nav-list{
+    width: 50%;
+    float: left;
+    padding-right: 100px;
+}
+.nav-list .list-block{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+      -webkit-justify-content: flex-end;
+            -ms-flex-pack: flex-end;
+        justify-content: flex-end;   
+    list-style: none;
+    padding-right: 100px;
+}
+.list-block li{
+    display: inline-block;
+    padding: 10px;
+}
+.list-block li:hover,
+.list-block li:focus{background: #092038}
+.list-block li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+}
+
+/*start header content*/
+header .header-content{
+    width: 800px;
+    color: #11355C;
+    padding: 50px 0;
+    margin:0 auto 50px;
+    text-align: center;
+}
+.header-content h1{
+    font-size: 3em;
+    font-weight: 500
+}
+.header-content h1 span{background: #11355C;color: #FFF}
+.header-content h2{
+    font-size: 2em;
+    font-weight: 400;
+    padding-top: 10px
+}
+/***end header***/
+
+/* ----------------------------------
+ * Start library Form
+ * ---------------------------------- */
+.library-form{
+    height: auto;
+    margin-bottom: 50px;
+    overflow: hidden
+}
+.form-container{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    padding: 10px 20px;
+}
+.library-content .library-name{
+    font-size: 20px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.form-container .code{
+    display: inline-table;
+    text-decoration: none;
+    color: #11355C;
+    font-size: 16px;
+    position: relative;
+    top: 440px;
+    left: -200px;
+}
+.register-form {
+  height: 430px;
+  width: 345px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+/*form1*/
+.register-form .form-content {
+  height: 100%;
+  width: 100%;
+  background: #11355C;
+  z-index: 999;
+}
+.register-heading {
+  width: 80%;
+  padding: 25px 40px;
+  font-size: 1.2em;
+}
+.register-heading h2{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.signin-form {
+  width: 80%;
+  margin: auto;
+}
+.signin-form label,
+.signin-form input[type=email],
+.signin-form input[type=password],
+.signin-form button {
+  display: block;
+}
+.signin-form label.inline {
+  display: inline;
+}
+.signin-form label {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 10px;
+}
+.signin-form input[type=email],
+.signin-form input[type=password] {
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  color: #FFF;
+  font-size: 13px;
+}
+.signin-form input[type=email]:focus,
+.signin-form input[type=password]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.signin-form button {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background: #1b66ea;
+  color: #FFF;
+  height: 35px;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+}
+.signin-form button:focus,
+.signin-form button:hover {
+  background-color: rgba(27, 102, 234, 0.8);
+  cursor: pointer;
+}
+
+.password-reset {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.password-reset a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+.password-reset a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*form 2*/
+.form {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    background: #FFF;
+    text-align: center;
+}
+.form .form-heading{
+    font: 400 1.2em sans-serif;
+    color: #11355C;
+    padding: 25px;
+}
+.form .form-heading h2{
+    text-transform: uppercase;
+}
+.form .form-btn2{margin-top: 20px}
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+}
+.form button {
+  width: 100%;
+  color: #FFF;
+  background: #11355C;
+  text-transform: uppercase;
+  border: 0;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  outline: 0;
+}
+.form button:hover,
+.form button:focus {
+  background: #071524;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #11355C;
+  text-decoration: none;
+}
+
+
+/*form 3*/
+.form .heading3{color: #16A085}
+.form .form-btn3{
+    background: #16A085;
+    margin-top: 20px
+}
+.form .form-btn3:hover,
+.form .form-btn3:focus {
+  background: #11826B;
+}
+button.social-signin {
+  width: 30%;
+  height: 45px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-weight: bold;
+  transition: 0.2s ease;
+  padding: 0;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+
+/*form 4*/
+.form-btn4{background: #11355C}
+
+/*form 5*/
+.form  .massage-form5{margin: 0}
+.form .social-form5{
+    height: 25px;
+    margin: 0;
+}
+/*form 6*/
+.form6{ 
+  background:#11355C;
+}
+.form6 .form{background: #11355C}
+.form6 h3{
+  font-size:1.4em;
+  text-transform:uppercase;
+  color:white;
+  font-weight:400;
+  margin:25px 0;
+}
+.form6 input {
+  display:block;
+  background-color:transparent;
+  border:none;
+  color:#FFF;
+  width:100%;
+  margin-bottom:30px;
+  outline:none;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.3);
+  transition: all 0.2s ease-in-out;
+}
+.form6 input:hover {
+  cursor:pointer;
+}
+.form6 input:focus {
+  border-bottom-color:white;
+  cursor:text;
+}
+.form6 .btn-form6 {
+  display:inline-block;
+  margin-top: 15px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: rgba(255,255,255,0.3);
+  border-radius:24px;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding:10px 0;
+  cursor:pointer;
+  transition: all 0.25s ease-in-out;
+}
+.btn-form6:hover,
+.btn-form6:focus {
+  border:1px solid #FFF;
+  color:#FFF;
+  margin-left: 5px;
+  outline:none;
+}
+/*--------------
+* subscribe form
+*--------------*/
+.sub-container .code{top: 210px}
+.sub-form{
+  width: 345px;
+  height: 200px;
+  background: #FFF;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.sub-form form{
+  width: 100%;
+}
+.sub-form input[type="email"]{
+  display: block;
+  width: 85%;
+  padding: 10px;
+  margin: 50px auto 10px;
+  border: 1px solid #16A085;
+  color: #16A085;
+  outline: none;
+}
+.sub-form input[type="submit"]{
+  display: block;
+  width: 85%;
+  padding: 15px;
+  margin: 0 auto;
+  background: #16A085;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.sub-form input[type="submit"]:hover{
+  background: #11826B;
+}
+
+/*subscribe form 2*/
+.sub-form .form-subscribe{
+    width: 90%;
+    margin: 30px auto;
+}
+.form-subscribe > input[type="email"]{
+  display: inline-block;
+  width: 70%;
+  padding: 15px;
+  border: 1px solid #11355C;
+  color: #11355C;
+}
+.form-subscribe > input[type="submit"]{
+  display: inline-block;
+  width: 27%;
+  padding: 15px 10px;
+  background: #11355C;
+
+}
+.form-subscribe > input[type="submit"]:hover{
+  background: #071524;
+}
+/*form subscribe 3*/
+.form-subscribe3 > input[type="email"]{
+    border-radius: 24px;
+    padding: 15px;
+}
+.form-subscribe3 > input[type="submit"]{
+    border-radius: 24px;
+    width: 70%
+}
+/*subscribe form 4*/
+.sub{height: 150px}
+.code4{top: 95px !important}
+.form-subscribe4 { 
+  width:450px;
+  padding: 15px; 
+  background-color: #db4648; 
+  border-radius: 8px; 
+  box-shadow: 0 8px 0 #96293B;
+}
+.form-subscribe4 .email-field { 
+  padding: 15px;
+  width: 60%; 
+  color: #c2c2c2; 
+  letter-spacing: .2em; 
+  background-color: #FFF; 
+  border: none;
+  border-radius: 4px; 
+}
+.form-subscribe4 .sub-btn { 
+  cursor: pointer;
+  padding: 15px; 
+  color: #fff;  
+  letter-spacing: .2em; 
+  text-transform: uppercase; 
+  background-color: #6f2b41; 
+  border-top: 0; 
+  border-right: 0; 
+  border-left: 0; 
+  border-bottom: 0;
+  border-radius: 4px; 
+  box-shadow: 0 5px 0 #54253e; 
+}
+.form-subscribe4 input:active.sub-btn { 
+  background-color: #6f2b41; 
+  border-bottom-color: #6f2b41;
+  box-shadow: 0 1px 0 #3c1a2c; 
+  margin-top: 4px; 
+  outline: none;
+}
+/* ----------------------------------
+ * Start Footer
+ * ---------------------------------- */
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background: #092038;
+    color: #FFF;
+    overflow: hidden
+}
+footer .copyright{
+    text-align: center;
+    font: 400 16px sans-serif;
+    padding: 10px;
+}
+footer ul{
+    list-style: none;
+    width: 200px;
+    margin: auto;
+    padding-left: 35px;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 5px;
+}
+footer a{text-decoration: none}
+
+
+/***end library content***/
+
+
+
+
+
+/*** media quiery***/
+@media screen and (max-width: 480px) {
+    /*main nav*/
+    .main-nav .nav-list{padding-right: 0}
+    .nav-list .list-block{padding-right: 0}
+    .list-block li a{font-size: 16px}
+    
+    .container{width: 300px}
+    
+    /*header*/
+    header .header-content{
+        width: 300px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 3.4em;
+    }
+        /*form container*/
+    .form-container{
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap   
+    }    
+    .form-container .reg-code{top: -35px;left: 110px}
+    .form-container .sub-code{top: -35px;left: 110px}
+    .form-subscribe > input[type="email"],
+    .form-subscribe > input[type="submit"]{width: 100%}
+    /*btn-container*/
+    .button-container{padding-left: 40px}
+    .form-subscribe4 .sub-btn{width: 60%}
+    .code4{
+        top: -10px !important;
+        left: 120px !important;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 700px) {
+    /*main nav*/
+    .main-nav .nav-list{padding-right: 0}
+    .nav-list .list-block{padding-right: 0}
+    .list-block li a{font-size: 16px}
+    
+    .container{width: 500px}
+    
+    /*header*/
+    header .header-content{
+        width: 500px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 3.4em;
+    }
+    /*form container*/
+    .form-container{
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap   
+    } 
+    .form-container .reg-code{top: 490px}
+    .register-form{margin: 50px auto}
+    .code4{
+        top: -55px !important;
+        left: 140px !important;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 960px) {
+    /*main nav*/
+    .main-nav .nav-list{padding-right: 0}
+    .nav-list .list-block{padding-right: 0}
+    .list-block li a{font-size: 18px}
+    
+    .container{width: 700px}
+    
+    /*header*/
+    header .header-content{
+        width: 700px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 3.4em;
+    }
+    /*form container*/
+    .form-container{
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap   
+    } 
+    .register-form,.sub-form{margin: auto;margin-bottom: 50px}
+}
+
+@media screen and (min-width: 961px) and (max-width: 1250px) {
+    /*main nav*/
+    .main-nav .nav-list{padding-right: 0}
+    .nav-list .list-block{padding-right: 0}
+    .list-block li a{font-size: 18px}
+    
+    .container{width: 960px}
+    
+    /*header*/
+    header .header-content{
+        width: 960px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 3.4em;
+    }
+}
+
