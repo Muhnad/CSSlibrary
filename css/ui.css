@@ -59,6 +59,11 @@ Folders Map ==>
 
  * ---------------------------------- */
 
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
+
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -86,9 +91,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -97,7 +99,7 @@ Folders Map ==>
     width: 1200px;
     margin: auto
 }
-.clearfix{clear: both}
+.clearfix{ clear: both }
 /*End Global*/
 
 body{
@@ -155,7 +157,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -183,7 +186,10 @@ header .header-content{
     font-size: 3em;
     font-weight: 500
 }
-.header-content h1 span{background: #11355C;color: #FFF}
+.header-content h1 span{
+    background: #11355C;
+    color: #FFF
+}
 .header-content h2{
     font-size: 2em;
     font-weight: 400;
@@ -236,8 +242,6 @@ header .header-content{
   cursor: pointer;
   line-height: 22px;
   -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -254,15 +258,11 @@ header .header-content{
   width: 20px;
   border: 2px solid #11355C;
   -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
 .checkbox input:checked + label,
-.radio input:checked + label{
-  color: #11355C;
-}
+.radio input:checked + label{ color: #11355C }
 
 .checkbox input:checked + label:before,
 .radio input:checked + label:before{
@@ -270,9 +270,7 @@ header .header-content{
   border-color: #11355C;
 }
 
-.radio input + label:before {
-  border-radius: 50%;
-}
+.radio input + label:before { border-radius: 50% }
 
 /*search*/
 .search {
@@ -295,21 +293,13 @@ header .header-content{
   font-weight:600;
 }
 
-.search::-webkit-input-placeholder {
-   color: #FFF;
-}
+.search::-webkit-input-placeholder { color: #FFF }
 
-.search:-moz-placeholder { 
-   color: #FFF;
-}
+.search:-moz-placeholder { color: #FFF }
 
-.search::-moz-placeholder {
-   color: #FFF;
-}
+.search::-moz-placeholder { color: #FFF }
 
-.search:-ms-input-placeholder {  
-   color: #FFF;
-}
+.search:-ms-input-placeholder { color: #FFF }
 
 .ui-container .search-code{
     top: 105px;
@@ -421,9 +411,7 @@ input[type='range'] {
    width:300px;
    min-width: 48px;
    -webkit-appearance: none;
-   -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-           border-radius: 5px;
+   border-radius: 5px;
    background: #092038;
    height: 10px;
    outline: none;

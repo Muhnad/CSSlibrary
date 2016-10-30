@@ -58,6 +58,10 @@ Folders Map ==>
     - laptops: true;
 
  * ---------------------------------- */
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -85,9 +89,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -96,7 +97,7 @@ Folders Map ==>
     width: 1200px;
     margin: auto
 }
-.clearfix{clear: both}
+.clearfix{ clear: both }
 /*End Global*/
 
 body{
@@ -154,7 +155,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -386,6 +388,7 @@ button.social-signin {
   border-radius: 2px;
   color: #FFF;
   font-weight: bold;
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   padding: 0;
   margin: 5px 0;
@@ -395,40 +398,34 @@ button.social-signin {
 button.social-signin:hover,
 button.social-signin:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
 button.social-signin:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
-button.social-signin.facebook {
-  background: #32508E;
-}
+button.social-signin.facebook { background: #32508E }
 
-button.social-signin.twitter {
-  background: #55ACEE;
-}
+button.social-signin.twitter { background: #55ACEE }
 
-button.social-signin.google {
-  background: #DD4B39;
-}
+button.social-signin.google { background: #DD4B39 }
 
 /*form 4*/
 .form-btn4{background: #11355C}
 
 /*form 5*/
-.form  .massage-form5{margin: 0}
+.form  .massage-form5{ margin: 0 }
 .form .social-form5{
     height: 25px;
     margin: 0;
 }
 /*form 6*/
-.form6{ 
-  background:#11355C;
-}
-.form6 .form{background: #11355C}
+.form6{ background:#11355C }
+.form6 .form{ background: #11355C }
 .form6 h3{
   font-size:1.4em;
   text-transform:uppercase;
@@ -446,11 +443,10 @@ button.social-signin.google {
   outline:none;
   padding:10px 0;
   border-bottom:1px solid rgba(255,255,255,0.3);
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.form6 input:hover {
-  cursor:pointer;
-}
+.form6 input:hover { cursor:pointer }
 .form6 input:focus {
   border-bottom-color:white;
   cursor:text;
@@ -466,6 +462,7 @@ button.social-signin.google {
   border: 1px solid rgba(255,255,255,0.3);
   padding:10px 0;
   cursor:pointer;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .btn-form6:hover,
@@ -489,9 +486,7 @@ button.social-signin.google {
   margin-bottom: 50px;
   overflow: hidden;
 }
-.sub-form form{
-  width: 100%;
-}
+.sub-form form{ width: 100% }
 .sub-form input[type="email"]{
   display: block;
   width: 85%;
@@ -513,9 +508,7 @@ button.social-signin.google {
   outline: none;
   cursor: pointer;
 }
-.sub-form input[type="submit"]:hover{
-  background: #11826B;
-}
+.sub-form input[type="submit"]:hover{ background: #11826B }
 
 /*subscribe form 2*/
 .sub-form .form-subscribe{

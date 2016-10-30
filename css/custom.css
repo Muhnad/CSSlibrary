@@ -59,6 +59,11 @@ Folders Map ==>
 
  * ---------------------------------- */
 
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
+
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -89,9 +94,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 .container{
@@ -162,7 +164,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -233,6 +236,8 @@ header .header-content{
     padding: 10px 20px;
 }
 .button-container .code{
+    width: 50px;
+    height: 50px;
     text-decoration: none;
     color: #11355C;
     font-size: 16px;
@@ -265,6 +270,7 @@ header .header-content{
   line-height: 1.3;
   font-size: 14px;
   color: #fff;
+  background: transparent;
   text-transform: none;
   font-weight: 500;
   min-width: 48px;
@@ -302,6 +308,7 @@ header .header-content{
     color: #FFF;
     position: relative;
     box-shadow: 0 4px 0 #092038;
+    -webkit-transition: top 1s ease-in-out;
     transition: top 1s ease-in-out
 }
 .btn-3d:active{
@@ -410,17 +417,12 @@ header .header-content{
   background: #11355C;
   border: none;
   -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   box-shadow: 0 0 .25em #333;
   cursor: pointer;
-  outline: none;
 }
 .btn-stretch:active {
   -webkit-transform: scale(1.2, 0.8);
-    -moz-transform: scale(1.2, 0.8);
-    -ms-transform: scale(1.2, 0.8);
     transform: scale(1.2, 0.8);
 }
 /*skew*/
@@ -495,12 +497,11 @@ header .header-content{
     width: 200px;
     border-radius: 50%;
 }
-.btn-move:hover {
-    color: #fff;
-}
+.btn-move:hover { color: #fff }
 .btn-rt:before {
     top: 100%;
     left: 100%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-rt:hover:before {
@@ -511,6 +512,7 @@ header .header-content{
 .btn-lf:before {
     left: -30px;
     bottom: 100%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-lf:hover:before {
@@ -520,6 +522,7 @@ header .header-content{
 .btn-tp:before {
     top: 0;
     left: -200%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-tp:hover:before {
@@ -533,6 +536,7 @@ header .header-content{
     position: relative;
   border:none;
   cursor:pointer;
+  -webkit-transition: 800ms ease all;
   transition:800ms ease all;
 }
 .btn-line:hover{
@@ -547,6 +551,7 @@ header .header-content{
   height:2px;
   width:0;
   background: #11355C;
+  -webkit-transition: 400ms ease all;
   transition:400ms ease all;
 }
 .btn-line:after{
@@ -557,6 +562,7 @@ header .header-content{
 }
 .btn-line:hover:before,.btn-line:hover:after{
   width:100%;
+  -webkit-transition: 800ms ease all;
   transition:800ms ease all;
 }
 /*cricle*/
@@ -564,7 +570,6 @@ header .header-content{
     position: relative;
     border: 2px solid #11355C;
     color: #11355C;
-    outline: none;
     overflow: hidden;
     -webkit-transition: color 0.3s 0.1s ease-out;
     transition: color 0.3s 0.1s ease-out;
@@ -588,9 +593,7 @@ header .header-content{
     transition: box-shadow 0.5s ease-out;
     z-index: -1;
 }
-.btn-crc:hover {
-    color: #fff;
-}
+.btn-crc:hover { color: #fff }
 .btn-crc:hover::before {
     box-shadow: inset 0 0 0 10em #11355C;
 }
@@ -598,8 +601,6 @@ header .header-content{
 .btn-slide,
 .btn-slide::after {
   -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .btn-slide {
@@ -616,9 +617,7 @@ header .header-content{
     position: absolute;
     z-index: -1;
 }
-.btn-slide:hover {
-    color: #FFF;
-}
+.btn-slide:hover { color: #FFF }
 
 /*slide top*/
 .slide-tp::after {
@@ -663,9 +662,12 @@ header .header-content{
   height: 100%;
   left: -35%;
   top: 0;
-  transform: skew(50deg);
-  transition-duration: 0.6s;
-  transform-origin: top left;
+  -webkit-transform: skew(50deg);
+          transform: skew(50deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
   width: 0;
 }
 .slide-sk:hover:after {
@@ -680,6 +682,7 @@ header .header-content{
     color: #FFF;
     overflow: hidden;
     z-index: 1;
+    -webkit-transition: color .3s;
     transition: color .3s;
 }
 .btn-flat:after {
@@ -691,11 +694,18 @@ header .header-content{
     height: 100%;
     background: #092038;
     z-index: -2;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
 }
 .btn-flat:hover::after {
-  transform: translateY(-80%);
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
   transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 /***btn more***/
@@ -795,7 +805,6 @@ header .header-content{
 }
 .signin-form input[type=email]:focus,
 .signin-form input[type=password]:focus {
-  outline: none;
   background-color: rgba(255, 255, 255, 0.4);
 }
 .signin-form button {
@@ -808,7 +817,6 @@ header .header-content{
   height: 35px;
   font-size: 14px;
   text-transform: uppercase;
-  outline: none;
 }
 .signin-form button:focus,
 .signin-form button:hover {
@@ -847,7 +855,6 @@ header .header-content{
     text-transform: uppercase;
 }
 .form input {
-    outline: 0;
     background: #f2f2f2;
     width: 100%;
     border: 0;
@@ -865,7 +872,6 @@ header .header-content{
   margin-top: 20px;
   font-size: 14px;
   cursor: pointer;
-  outline: 0;
 }
 .form button:hover,
 .form button:focus {
@@ -896,6 +902,7 @@ button.social-signin {
   border-radius: 2px;
   color: #FFF;
   font-weight: bold;
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   padding: 0;
   margin: 5px 0;
@@ -905,11 +912,13 @@ button.social-signin {
 button.social-signin:hover,
 button.social-signin:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
 button.social-signin:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
@@ -949,7 +958,6 @@ button.social-signin.google {
   margin: 50px auto 10px;
   border: 1px solid #16A085;
   color: #16A085;
-  outline: none;
 }
 .sub-form input[type="submit"]{
   display: block;
@@ -960,7 +968,6 @@ button.social-signin.google {
   color: #FFF;
   font-size: 16px;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 .sub-form input[type="submit"]:hover{
@@ -1029,8 +1036,6 @@ button.social-signin.google {
    color: #11355C;
 	width:80%;
 	height:65px;
-	-webkit-box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
-	-moz-box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
 	box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
     margin-bottom: 50px;
     overflow:hidden;
@@ -1052,24 +1057,20 @@ button.social-signin.google {
 	font-weight:bold;
 	border-left:none;
 }
-.nav li:hover {
-	background-color:#092038;
-}
+.nav li:hover { background-color: #092038 }
 .nav li a{
 	color: #11355C;
 	text-decoration:none;
 }
-.nav li:hover a{
-  color: #FFF;
-}
+.nav li:hover a{ color: #FFF }
 /*nav 2*/
-.nav2 {background: #092038;}
+.nav2 { background: #092038 }
 .nav2 > .active1{
     background: #122f4c;
     border-top: 3px solid #16A085;
 }
-.nav2 > li{color: #FFF}
-.nav2 > li a{color: #FFF}
+.nav2 > li{ color: #FFF }
+.nav2 > li a{ color: #FFF }
 .nav2 > li:not(.active1):hover {
     background:#122f4c;
     border-top: 3px solid #55ACEE;
@@ -1107,7 +1108,6 @@ button.social-signin.google {
   height: 100%;
   line-height: 50px;
   border-left: 5px solid transparent;
-  outline: 0;
   cursor: pointer;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -1116,7 +1116,6 @@ button.social-signin.google {
   color: #EC6E00;
   border-left: 5px solid #EC6E00;
   background-color: #323C40;
-  outline: 0;
 }
 .navbar > li:not(.active):hover a {
   color: #FAFAFA;
@@ -1180,8 +1179,6 @@ button.social-signin.google {
   cursor: pointer;
   line-height: 22px;
   -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -1198,8 +1195,6 @@ button.social-signin.google {
   width: 20px;
   border: 2px solid #11355C;
   -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -1214,9 +1209,7 @@ button.social-signin.google {
   border-color: #11355C;
 }
 
-.radio input + label:before {
-  border-radius: 50%;
-}
+.radio input + label:before { border-radius: 50% }
 
 /*search*/
 .search {
@@ -1229,7 +1222,6 @@ button.social-signin.google {
   border:none;
   background:#092038;
   color:#fff;
-  outline:none;
 }
 
 .search:focus {
@@ -1239,21 +1231,13 @@ button.social-signin.google {
   font-weight:600;
 }
 
-.search::-webkit-input-placeholder {
-   color: #FFF;
-}
+.search::-webkit-input-placeholder { color: #FFF }
 
-.search:-moz-placeholder { 
-   color: #FFF;
-}
+.search:-moz-placeholder { color: #FFF }
 
-.search::-moz-placeholder {
-   color: #FFF;
-}
+.search::-moz-placeholder { color: #FFF }
 
-.search:-ms-input-placeholder {  
-   color: #FFF;
-}
+.search:-ms-input-placeholder { color: #FFF }
 
 .ui-container .search-code{
     top: 85px;
@@ -1271,12 +1255,9 @@ input[type='range'] {
    width:300px;
    min-width: 48px;
    -webkit-appearance: none;
-   -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-           border-radius: 5px;
+   border-radius: 5px;
    background: #092038;
    height: 10px;
-   outline: none;
    transition: all .3s ease-in-out;
    -moz-transition: all .3s ease-in-out;
    -webkit-transition: all .3s ease-in-out;
@@ -1341,6 +1322,9 @@ footer ul li{
     padding: 0 5px;
 }
 footer a{text-decoration: none}
+
+
+
 /* ----------------------------------
  * Start media query
  * ---------------------------------- */

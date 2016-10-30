@@ -58,6 +58,10 @@ Folders Map ==>
     - laptops: true;
 
  * ---------------------------------- */
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -85,9 +89,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -96,7 +97,7 @@ Folders Map ==>
     width: 1200px;
     margin: auto
 }
-.clearfix{clear: both}
+.clearfix{ clear: both }
 /*End Global*/
 
 body{
@@ -154,7 +155,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -226,8 +228,6 @@ header .header-content{
    color: #11355C;
 	width:80%;
 	height:65px;
-	-webkit-box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
-	-moz-box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
 	box-shadow:0px 2px 1px rgba(50, 50, 50, 0.22);
     margin-bottom: 50px;
     overflow:hidden;
@@ -249,24 +249,20 @@ header .header-content{
 	font-weight:bold;
 	border-left:none;
 }
-.nav li:hover {
-	background-color:#092038;
-}
+.nav li:hover { background-color:#092038 }
 .nav li a{
 	color: #11355C;
 	text-decoration:none;
 }
-.nav li:hover a{
-  color: #FFF;
-}
+.nav li:hover a{ color: #FFF }
 /*nav 2*/
-.nav2 {background: #092038;}
+.nav2 { background: #092038 }
 .nav2 > .active1{
     background: #122f4c;
     border-top: 3px solid #16A085;
 }
-.nav2 > li{color: #FFF}
-.nav2 > li a{color: #FFF}
+.nav2 > li{ color: #FFF }
+.nav2 > li a{ color: #FFF }
 .nav2 > li:not(.active1):hover {
     background:#122f4c;
     border-top: 3px solid #55ACEE;

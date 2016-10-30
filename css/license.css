@@ -59,6 +59,11 @@ Folders Map ==>
 
  * ---------------------------------- */
 
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
+
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -89,9 +94,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 .container{
@@ -161,7 +163,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -194,6 +197,7 @@ main .license{
     font: 300 20px sans-serif;
     padding: 10px;
     text-align: justify;
+    line-height: 1.4
 }
 /* ----------------------------------
  * Start Footer
@@ -222,7 +226,10 @@ footer ul li{
     display: inline-block;
     padding: 0 5px;
 }
-footer a{text-decoration: none}
+footer a{ text-decoration: none }
+
+
+
 /* ----------------------------------
  * Start media query
  * ---------------------------------- */

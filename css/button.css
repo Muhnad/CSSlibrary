@@ -58,6 +58,10 @@ Folders Map ==>
     - laptops: true;
 
  * ---------------------------------- */
+::-moz-selection{
+    background: #1860AD;
+    color: #FFF
+}
 ::selection{
     background: #1860AD;
     color: #FFF
@@ -85,9 +89,6 @@ Folders Map ==>
 *{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -154,7 +155,8 @@ header .main-nav{
     display: flex;
       -webkit-justify-content: flex-end;
             -ms-flex-pack: flex-end;
-        justify-content: flex-end;   
+        -webkit-box-pack: end;
+              justify-content: flex-end;   
     list-style: none;
     padding-right: 100px;
 }
@@ -220,6 +222,9 @@ header .header-content{
     padding: 10px 20px;
 }
 .button-container .code{
+    display: block;
+    width: 50px;
+    height: 50px;
     text-decoration: none;
     color: #11355C;
     font-size: 16px;
@@ -252,6 +257,7 @@ header .header-content{
   line-height: 1.3;
   font-size: 14px;
   color: #fff;
+  background: transparent;
   text-transform: none;
   font-weight: 500;
   min-width: 48px;
@@ -289,6 +295,7 @@ header .header-content{
     color: #FFF;
     position: relative;
     box-shadow: 0 4px 0 #092038;
+    -webkit-transition: top 1s ease-in-out;
     transition: top 1s ease-in-out
 }
 .btn-3d:active{
@@ -397,17 +404,12 @@ header .header-content{
   background: #11355C;
   border: none;
   -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   box-shadow: 0 0 .25em #333;
   cursor: pointer;
-  outline: none;
 }
 .btn-stretch:active {
   -webkit-transform: scale(1.2, 0.8);
-    -moz-transform: scale(1.2, 0.8);
-    -ms-transform: scale(1.2, 0.8);
     transform: scale(1.2, 0.8);
 }
 /*skew*/
@@ -488,6 +490,7 @@ header .header-content{
 .btn-rt:before {
     top: 100%;
     left: 100%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-rt:hover:before {
@@ -498,6 +501,7 @@ header .header-content{
 .btn-lf:before {
     left: -30px;
     bottom: 100%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-lf:hover:before {
@@ -507,6 +511,7 @@ header .header-content{
 .btn-tp:before {
     top: 0;
     left: -200%;
+    -webkit-transition: all .7s;
     transition: all .7s;
 }
 .btn-tp:hover:before {
@@ -520,6 +525,7 @@ header .header-content{
     position: relative;
   border:none;
   cursor:pointer;
+  -webkit-transition: 800ms ease all;
   transition:800ms ease all;
 }
 .btn-line:hover{
@@ -534,6 +540,7 @@ header .header-content{
   height:2px;
   width:0;
   background: #11355C;
+  -webkit-transition: 400ms ease all;
   transition:400ms ease all;
 }
 .btn-line:after{
@@ -544,6 +551,7 @@ header .header-content{
 }
 .btn-line:hover:before,.btn-line:hover:after{
   width:100%;
+  -webkit-transition: 800ms ease all;
   transition:800ms ease all;
 }
 /*cricle*/
@@ -551,7 +559,6 @@ header .header-content{
     position: relative;
     border: 2px solid #11355C;
     color: #11355C;
-    outline: none;
     overflow: hidden;
     -webkit-transition: color 0.3s 0.1s ease-out;
     transition: color 0.3s 0.1s ease-out;
@@ -585,8 +592,6 @@ header .header-content{
 .btn-slide,
 .btn-slide::after {
   -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .btn-slide {
@@ -650,9 +655,12 @@ header .header-content{
   height: 100%;
   left: -35%;
   top: 0;
-  transform: skew(50deg);
-  transition-duration: 0.6s;
-  transform-origin: top left;
+  -webkit-transform: skew(50deg);
+          transform: skew(50deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
   width: 0;
 }
 .slide-sk:hover:after {
@@ -667,6 +675,7 @@ header .header-content{
     color: #FFF;
     overflow: hidden;
     z-index: 1;
+    -webkit-transition: color .3s;
     transition: color .3s;
 }
 .btn-flat:after {
@@ -678,11 +687,18 @@ header .header-content{
     height: 100%;
     background: #092038;
     z-index: -2;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
 }
 .btn-flat:hover::after {
-  transform: translateY(-80%);
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
   transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 /*simple*/
 .button-simple{
