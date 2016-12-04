@@ -1,5 +1,5 @@
 <!DOCTYPE html>                       
-<html>
+<html lang="en">
     <head>
         
         <!--meta tags -->
@@ -41,9 +41,9 @@
     </head>
     <body>
         
-        <header>
+        <header role=banner>
             <!--Start navbar -->
-            <nav class="main-nav">
+            <nav class="main-nav" role=navigation>
                 <div class="container">
                     <div class="logo">
                         <h3 class="logo-name">
@@ -71,10 +71,10 @@
         </header>
         
         <!--Start library content-->
-        <main class="library-content">
+        <main class="library-content" role=main>
             <div class="container">
                 <!--Start button library-->
-                <section class="library library-btn">
+                <section class="library library-btn" role=region>
                     <h4 class="library-name">button styles</h4>
                     <div class="button-container">
                           <!--border-->
@@ -155,7 +155,7 @@
                    class="btn-more button">more</a>
                 
                 <!--Start form library-->
-                <section class="library library-form">
+                <section class="library library-form" role=region>
                     <h4 class="library-name">form styles</h4>
                     <!--signin form-->
                     <div class="form-container">
@@ -166,7 +166,7 @@
                                     <h2>sign in</h2>
                                 </div>
                                 <div class="signin-form">
-                                  <form>
+                                  <form role="form">
                                     <label>E-mail</label>
                                     <input type="email" required/>
                                     <label>Password</label>
@@ -190,7 +190,7 @@
                                 <div class="form-heading">
                                     <h2>sign in</h2>
                                 </div>
-                                <form class="login-page">
+                                <form role="form" class="login-page">
                                     <input type="email" 
                                       placeholder="E-mail" required/>
                                     <input type="password" placeholder="password" required/>      
@@ -210,7 +210,7 @@
                                 <div class="form-heading heading3">
                                     <h2>sign in</h2>
                                 </div>
-                                <form class="login-page">
+                                <form role="form" class="login-page">
                                   <input type="email" 
                                    placeholder="E-mail" required/>
                                   <input type="password" placeholder="password" required/>      
@@ -231,7 +231,7 @@
                     <div class="form-container sub-container">
                         <!--subscribr form 1-->  
                         <div class="sub-form">
-                          <form>
+                          <form role="form">
                             <input type="email" placeholder="E-mail">
                             <input type="submit" value="subscribe">
                           </form>
@@ -241,7 +241,7 @@
                         
                         <!--subscribr form 3--> 
                         <div class="sub-form">
-                          <form class="form-subscribe3">
+                          <form role="form" class="form-subscribe3">
                             <input type="email" placeholder="E-mail">
                             <input type="submit" value="subscribe">
                           </form>
@@ -251,7 +251,7 @@
                         
                         <!--subscribr form 2--> 
                         <div class="sub-form">
-                          <form class="form-subscribe">
+                          <form role="form" class="form-subscribe">
                             <input type="email" placeholder="E-mail">
                             <input type="submit" value="subscribe">
                           </form>
@@ -266,7 +266,7 @@
                    class="btn-more button">more</a>
                 
                 <!--Start navigation library-->
-                <section class="library library-nav">
+                <section class="library library-nav" role=region>
                     <h4 class="library-name">navigation styles</h4>
                     <div class="nav-container">
                         <!--nav 1-->
@@ -327,7 +327,7 @@
                    class="btn-more button">more</a>
                 
                 <!--Start ui library-->
-                <section class="library library-ui">
+                <section class="library library-ui" role=region>
                     <h4 class="library-name">UI styles</h4>
                     <div class="ui-container">
                         <!--checkbox-->
@@ -345,7 +345,7 @@
                              class="code" target="_blank">Code</a>
                         <!--radio-->
                         <div class="radio">
-                          <form>
+                          <form role="form">
                             <input type="radio" id="radio1" name="radio-group">
                             <label for="radio1">Option One</label>
                             <input type="radio" id="radio2" name="radio-group">
@@ -385,7 +385,7 @@
         <!--End library content-->
 
         <!--Start Footer-->
-        <footer>
+        <footer role=contentinfo>
             <div class="container">
                 <p class="copyright">&copy; 2016-2017 CSS library</p>
                     <ul>
@@ -415,7 +415,6 @@
 
           ga('create', 'UA-77427944-1', 'auto');
           ga('send', 'pageview');
-
         </script>
     </body>
 </html>
