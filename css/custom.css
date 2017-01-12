@@ -102,6 +102,16 @@ Folders Map ==>
 }
 .clearfix{clear: both}
 
+.vs-hide {
+  position: absolute;
+  height: 1px;
+  width: 1px; 
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;  
+}
 /* ----------------------------------
  * Start Body
  * ---------------------------------- */
@@ -145,6 +155,7 @@ header .main-nav{
 .logo .logo-name{
     font-size: 22px;
     font-weight: bold;
+    margin: 0;
 }
 .logo .logo-name a{
     color: #FFF;
@@ -188,18 +199,21 @@ header .header-content{
     width: 800px;
     color: #11355C;
     padding: 50px 0;
-    margin:0 auto 50px;
+    margin: 28px auto 50px;
     text-align: center;
 }
-.header-content h1{
+.header-content h2{
     font-size: 3em;
     font-weight: 500
 }
-.header-content h1 span{background: #11355C;color: #FFF}
-.header-content h2{
+.header-content h2 span{
+  background: #11355C;
+  color: #FFF
+}
+.header-content h3{
     font-size: 2em;
     font-weight: 400;
-    padding-top: 10px
+    padding-top: 38px
 }
 /***end header***/
 
