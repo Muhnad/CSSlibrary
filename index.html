@@ -11,19 +11,19 @@
     <meta name="description" content="css library, is website you can find  web UI elements Examples and complete UI kits coded with HTML5, CSS3"> 
     
     <!--Domain Name-->
-    <meta name="url" content="http://www.csslibrary.cf/">
+    <meta name="url" content="http://csslibrary.surge.sh/">
     
     
     <!--Faceboob Open graph meta-->        
     <meta property="og:title" content="CSS Library">
     <meta property="og:type" content="UI Kit Website">
-    <meta property="og:url" content="http://www.csslibrary.cf/">
+    <meta property="og:url" content="http://csslibrary.surge.sh/">
     <meta property="og:description" content="css library, is website you can find  web UI elements Examples and complete UI kits coded with HTML5, CSS3">
     <meta property="og:site_name" content="csslibrary">
     
     <!--Twitter Open graph meta--> 
     <meta name="twitter:title" content="CSS Library">
-    <meta name="twitter:url" content="http://www.csslibrary.cf/">
+    <meta name="twitter:url" content="http://csslibrary.surge.sh/">
     <meta name="twitter:description" content="css library, is website you can find  web UI elements Examples and complete UI kits coded with HTML5, CSS3">
     <meta name="twitter:site" content="csslibrary">
 
@@ -36,15 +36,17 @@
 
 </head>
 <body>
-    
-    <header role=banner>
+    <header role="banner"
+            aria-labelledby="header-intro"
+            aria-describedby="header-desc">
         <!--Start navbar -->
-        <nav class="main-nav" role=navigation aria-label="main navigation">
+        <nav role="navigation" class="main-nav"
+             aria-label="main navigation">
             <div class="container">
                 <div class="logo">
                     <h1 class="logo-name">
                         <a href="index.html">CSS Library</a>
-                      </h1>
+                    </h1>
                 </div><!--End logo-->
                 
                 <div class="nav-list">
@@ -60,10 +62,10 @@
         <!--Start header content -->
         <div class="container">
             <div class="header-content">
-                <h2>
+                <h2 id="header-intro">
                   <span>CSS</span> Library, UI kits For Web Developers.
                 </h2>
-                <h3>
+                <h3 id="header-desc">
                   We offer user interface kits,to make your work easiest.
                 </h3>
             </div><!--End header-content-->
@@ -72,10 +74,10 @@
     </header>
     
     <!--Start library content-->
-    <main class="library-content" role=main>
+    <main class="library-content" role="main">
         <div class="container">
             <!--Start button library-->
-            <section class="library library-btn" role=region aria-labelledby='introBtns'>
+            <section class="library library-btn" aria-labelledby='introBtns'>
                 <h4 class="library-name" id="introBtns">button styles</h4>
                 <div class="button-container">
                   <p class="vs-hide" id="newTab">Link will open in new tab</p>
@@ -157,7 +159,7 @@
                class="btn-more button">more</a>
             
             <!--Start form library-->
-            <section class="library library-form" role=region aria-labelledby="introForms">
+            <section class="library library-form"  aria-labelledby="introForms">
                 <h4 class="library-name" id="introForms">form styles</h4>
                 <!--signin form-->
                 <div class="form-container">
@@ -268,7 +270,7 @@
                class="btn-more button">more</a>
             
             <!--Start navigation library-->
-            <section class="library library-nav" role=region aria-labelledby="introNav">
+            <section class="library library-nav" aria-labelledby="introNav">
                 <h4 class="library-name" id="introNav">navigation styles</h4>
                 <div class="nav-container">
                     <!--nav 1-->
@@ -329,7 +331,7 @@
                class="btn-more button">more</a>
             
             <!--Start ui library-->
-            <section class="library library-ui" role=region aria-labelledby="introUi">
+            <section class="library library-ui" aria-labelledby="introUi">
                 <h4 class="library-name" id="introUi">UI styles</h4>
                 <div class="ui-container">
                     <!--checkbox-->
